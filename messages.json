@@ -1,0 +1,29 @@
+{
+  "messages": [
+    {
+      "id": "1",
+      "firstname": "John",
+      "message": "Hey, what's up?"
+    },
+    {
+      "id": "2",
+      "firstname": "Kieren",
+      "message": "Not much man"
+    },
+    {
+      "id": "3",
+      "firstname": "Lewy",
+      "message": "Yeah same"
+    },
+    {
+      "id": "4",
+      "firstname": "Betty",
+      "message": "Let's do something"
+    },
+    {
+      "id": "5",
+      "firstname": "Erin",
+      "message": "What time you thinking?"
+    }
+  ]
+}

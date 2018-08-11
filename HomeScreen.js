@@ -45,12 +45,26 @@ class HomeScreen extends Component {
     this.props.navigation.navigate('Chat');
   }
 
+  handleCreateAccount = () => {
+    this.props.navigation.navigate('Register')
+  }
+
+
+
   render() {
 
     return (
       <View
         key="HomeScreen"
         style={styles.container}>
+
+        <View>
+          <TouchableOpacity
+            onPress={ this.handleCreateAccount }
+            style={styles.buttonContainer}>
+              <Text style={styles.buttonText}>Create an Account</Text>
+          </TouchableOpacity>
+        </View>
 
         <View>
           <TouchableOpacity

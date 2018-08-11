@@ -19,7 +19,9 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     alignItems: 'center',
     width: 200,
-    borderRadius: 15
+    height: 50,
+    marginBottom: 20,
+    borderRadius: 10
   },
   buttonText: {
     textAlign: 'center',
@@ -29,7 +31,9 @@ const styles = StyleSheet.create({
     paddingTop: 15,
     paddingBottom: 15,
     paddingRight: 50,
-    paddingLeft: 50
+    paddingLeft: 50,
+    width: 200,
+    height: 50
   }
 })
 
@@ -62,7 +66,7 @@ class HomeScreen extends Component {
           <TouchableOpacity
             onPress={ this.handleCreateAccount }
             style={styles.buttonContainer}>
-              <Text style={styles.buttonText}>Create an Account</Text>
+              <Text style={styles.buttonText}>Register</Text>
           </TouchableOpacity>
         </View>
 

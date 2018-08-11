@@ -18,10 +18,43 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  headerContainer: {
+    alignItems: 'center',
+    width: 375,
+    marginTop: 30,
+    marginBottom: 30
+  },
+  header: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    textAlign: 'center',
+    fontWeight: "bold",
+    color: 'white',
+    fontSize: 24,
+    paddingTop: 20,
+    paddingBottom: 50
+  },
+  textInputContainer: {
+    overflow: 'hidden',
+    alignItems: 'center',
+    width: 375,
+    marginTop: 30,
+    marginBottom: 30
+  },
+  textInput: {
+    backgroundColor: "rgba(53, 183, 41, 0.67)",
+    marginBottom: 10,
+    width: 300,
+    height: 50,
+    paddingLeft: 10,
+    borderRadius: 5
+  },
   buttonContainer: {
     overflow: 'hidden',
     alignItems: 'center',
-    width: 200,
+    width: 375,
+    height: 50,
+    marginBottom: 5,
     borderRadius: 15
   },
   buttonText: {
@@ -32,7 +65,8 @@ const styles = StyleSheet.create({
     paddingTop: 15,
     paddingBottom: 15,
     paddingRight: 50,
-    paddingLeft: 50
+    paddingLeft: 50,
+    width: 200
   }
 })
 
@@ -41,7 +75,7 @@ class Register extends Component {
   static navigationOptions = {
     title: "Register Account",
     headerStyle: {
-      backgroundColor: "rgba(53, 183, 41, 0.65)",
+      display: 'none',
     },
     headerTintColor: "white",
   }
@@ -85,21 +119,25 @@ class Register extends Component {
   render() {
     return (
       <View
-        key="HomeScreen"
+        key="Register"
         style={styles.container}>
 
         <View>
-          <Text>Register Account</Text>
+          <View styles={styles.headerContainer}>
+            <Text style={styles.header}>Register Account</Text>
+          </View>
+
+        <View style={styles.textInputContainer}>
 
           <TextInput
-            style={styles.header}
+            style={styles.textInput}
             placeholder="Enter your username"
             onChangeText={(text) => this.setState({username: text})}
             value={this.state.username}
           />
 
           <TextInput
-            style={styles.header}
+            style={styles.textInput}
             placeholder="Enter your password"
             onChangeText={(text) => this.setState({password: text})}
             value={this.state.password}
@@ -107,12 +145,14 @@ class Register extends Component {
           />
 
           <TextInput
-            style={styles.header}
+            style={styles.textInput}
             placeholder="Enter your password"
             onChangeText={(text) => this.setState({passwordConfirm: text})}
             value={this.state.passwordConfirm}
             secureTextEntry={true}
           />
+
+        </View>
 
           <TouchableOpacity
             onPress={ this.registerAccount }

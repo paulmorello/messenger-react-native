@@ -11,9 +11,11 @@ import { createStackNavigator } from 'react-navigation';
 import HomeScreen from './HomeScreen';
 import MainChat from './MainChat';
 import Register from './Register';
+import Login from './Login';
 
 export default createStackNavigator({
   Home: { screen: HomeScreen },
   Chat: { screen: MainChat },
-  Register: { screen: Register }
+  Register: { screen: Register },
+  Login: { screen: Login }
 });

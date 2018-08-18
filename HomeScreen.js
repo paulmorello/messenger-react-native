@@ -72,6 +72,14 @@ class HomeScreen extends Component {
 
         <View>
           <TouchableOpacity
+            onPress={ this.loginAccount }
+            style={styles.buttonContainer}>
+              <Text style={styles.buttonText}>Log In</Text>
+          </TouchableOpacity>
+        </View>
+
+        <View>
+          <TouchableOpacity
             onPress={ this.handleStartChat }
             style={styles.buttonContainer}>
               <Text style={styles.buttonText}>Start a Chat</Text>

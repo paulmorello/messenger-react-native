@@ -10,6 +10,67 @@ import {
   AsyncStorage
 } from 'react-native';
 
+// Styles
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "rgba(53, 183, 41, 0.65)",
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  headerContainer: {
+    alignItems: 'center',
+    width: 375,
+    marginTop: 30,
+    marginBottom: 30
+  },
+  header: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    textAlign: 'center',
+    fontWeight: "bold",
+    color: 'white',
+    fontSize: 24,
+    paddingTop: 20,
+    paddingBottom: 50
+  },
+  textInputContainer: {
+    overflow: 'hidden',
+    alignItems: 'center',
+    width: 375,
+    marginTop: 30,
+    marginBottom: 30
+  },
+  textInput: {
+    backgroundColor: "rgba(53, 183, 41, 0.67)",
+    marginBottom: 10,
+    width: 300,
+    height: 50,
+    paddingLeft: 10,
+    borderRadius: 5
+  },
+  buttonContainer: {
+    overflow: 'hidden',
+    alignItems: 'center',
+    width: 375,
+    height: 50,
+    marginBottom: 5,
+    borderRadius: 15
+  },
+  buttonText: {
+    textAlign: 'center',
+    color: "rgba(53, 183, 41, 0.65)",
+    fontWeight: "bold",
+    backgroundColor: "white",
+    paddingTop: 15,
+    paddingBottom: 15,
+    paddingRight: 50,
+    paddingLeft: 50,
+    width: 200
+  }
+})
+
+
 class Register extends Component {
 
   static navigationOptions = {

@@ -50,7 +50,11 @@ class HomeScreen extends Component {
   }
 
   handleCreateAccount = () => {
-    this.props.navigation.navigate('Register')
+    this.props.navigation.navigate('Register');
+  }
+
+  handleLoginAccount = () => {
+    this.props.navigation.navigate('Login');
   }
 
 
@@ -72,7 +76,7 @@ class HomeScreen extends Component {
 
         <View>
           <TouchableOpacity
-            onPress={ this.loginAccount }
+            onPress={ this.handleLoginAccount }
             style={styles.buttonContainer}>
               <Text style={styles.buttonText}>Log In</Text>
           </TouchableOpacity>

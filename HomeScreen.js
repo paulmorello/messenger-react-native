@@ -4,7 +4,8 @@ import {
   Text,
   View,
   TextInput,
-  TouchableOpacity
+  TouchableOpacity,
+  AsyncStorage
 } from 'react-native';
 
 // Styles
@@ -46,7 +47,15 @@ class HomeScreen extends Component {
   };
 
   handleStartChat = () => {
-    this.props.navigation.navigate('Chat');
+    AsyncStorage.getItem('userLoggedIn', (err, result) => {
+
+      if (result !== 'none') {
+        this.props.navigation.navigate('Chat');
+      } else {
+        this.props.navigation.navigate('Login');
+      }
+
+    })
   }
 
   handleCreateAccount = () => {
